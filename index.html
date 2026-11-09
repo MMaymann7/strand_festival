@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Sound of Hornbæk | Strandfestival</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,9 +12,9 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Sound of Hornbæk</a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
           <li><a href="./svg.html">Interaktiv SVG</a></li>
@@ -24,11 +24,56 @@
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="hero">
+      <div class="hero_content">
+        <img src="./imgs/forside_hero_img.png" alt="Hero Image">
+      </div>
+    </section>
+
+    <section class="forside_indhold">
+      <div class="forside_tekst">
+        <h1>Musik Ved Vandkanten</h1>
+
+        <p>Oplev Danmarks største popstjerner, sommer-DJ-sets og intime akustiske
+          solnedgangskoncerter.</p>
+      </div>
+
+      <div class="artists">
+        <div class="box1">
+          <img src="./imgs/lukasgraham_forside_billede.webp" alt="Lukas Graham">
+
+          <p>Lukas Graham</p>
+
+          <button class="btn" popovertarget="box1">
+            Læs mere
+          </button>
+        </div>
+
+        <div class="box2">
+          <img src="./imgs/annika_forside_billede.png" alt="Annika">
+
+          <p>Annika</p>
+        </div>
+
+        <div class="box3">
+          <img src="./imgs/christopher_forside_billede.jpg" alt="Christopher">
+
+          <p>Christopher</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svg_teaser">
+      <div>
+        <img class="svg_billede" src="./imgs/svg_forside_billede.png" alt="SVG">
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
+      <p>Sound of Hornbæk</p>
       <p>Footer</p>
     </div>
   </footer>
