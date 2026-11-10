@@ -1,7 +1,7 @@
 /* Variabler */
 html {
   --color-page: #fff6e3;
-  --color-surface: #fff;
+  --color-surface: #6aadd7;
   --color-svg-box: #4aa2e1;
   --color-text: #12324a;
   --color-muted: var(--color-text);
@@ -137,6 +137,11 @@ main > * {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-1);
+  font-family:
+    "Arial Rounded MT Bold", "Hiragino Maru Gothic ProN", "Trebuchet MS",
+    sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .site-logo {
@@ -151,7 +156,7 @@ main > * {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--space-1);
-  color: var(--color-muted);
+  color: #ffffff;
 }
 
 /* Navigation */
@@ -191,13 +196,13 @@ main > * {
 .menu a {
   display: block;
   padding: 0.4rem 0;
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
   border-bottom: 2px solid #0000;
 }
 
 .menu a[aria-current="page"] {
-  border-bottom-color: var(--color-border);
+  border-bottom-color: #ffffff;
 }
 
 /* Flader */
@@ -275,41 +280,185 @@ main > * {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 15px;
+    font-size: 1.5rem;
   }
 }
 .artists {
   display: flex;
   gap: 30px;
-  .box1 {
-    display: block;
-    background-color: white;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1rem;
-    width: auto;
-    height: auto;
-  }
-  .box2 {
-    display: block;
-    background-color: white;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1rem;
-    width: auto;
-    height: auto;
-  }
+  padding: 30px 20px;
+
+  .box1,
+  .box2,
   .box3 {
+    position: relative;
     display: block;
-    background-color: white;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border: 8px solid #4f8fd0;
+    background-color: #4f8fd0;
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
-    width: auto;
-    height: auto;
+
+    /* Navnet er kun til skærmlæsere */
+    p {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    z-index: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d98b48;
+    color: white;
+    font-family: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
+    font-weight: 800;
+    font-size: clamp(18px, 2vw, 30px);
+    line-height: 1;
+
+    &:hover {
+      background-color: #c97d3b;
+    }
   }
 }
 .svg_teaser {
   display: grid;
+}
+
+.box1 {
+  transition: 0.4s;
+}
+.box1:hover {
+  transform: scale(1.08);
+}
+.box2 {
+  transition: 0.4s;
+}
+.box2:hover {
+  transform: scale(1.08);
+}
+.box3 {
+  transition: 0.4s;
+}
+.box3:hover {
+  transform: scale(1.08);
+}
+
+.marquee {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: 1 / -1;
+  background: #62a0dd;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 52px 0;
+}
+
+.track span {
+  font-family: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
+  font-weight: 800;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: pre;
+}
+
+.popup {
+  margin: auto;
+  width: min(90vw, 800px);
+  padding: 30px;
+  border: 8px solid #4f8fd0;
+  background-color: #fdf6e3;
+  color: #1b1b1b;
+  font-family: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
+
+  /* Blød åbning og lukning */
+  opacity: 0;
+  transition:
+    opacity 0.25s,
+    display 0.25s allow-discrete,
+    overlay 0.25s allow-discrete;
+}
+
+/* Layoutet skal kun gælde, når popoveren er åben */
+.popup:popover-open {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  opacity: 1;
+}
+
+@starting-style {
+  .popup:popover-open {
+    opacity: 0;
+  }
+}
+
+.popup::backdrop {
+  background-color: rgb(0 0 0 / 0.6);
+}
+
+.popup img {
+  flex: 0 0 40%;
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 6px solid #4f8fd0;
+}
+
+.popup-tekst {
+  flex: 1;
+  text-align: left;
+}
+
+.popup h2 {
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #4f8fd0;
+}
+
+.popup p {
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.luk {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d98b48;
+  color: white;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.luk:hover {
+  background-color: #c97d3b;
+}
+
+/* På små skærme kommer billedet over teksten */
+@media (max-width: 600px) {
+  .popup:popover-open {
+    flex-direction: column;
+  }
+
+  .popup img {
+    flex: none;
+    width: 100%;
+  }
 }
 
 /* SVG */
