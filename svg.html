@@ -28,29 +28,35 @@
     <section class="svg-page">
       <header class="svg-intro">
         <h1>Festival Overblik</h1>
-        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
+        <p>Find vej rundt på festivalen her.</p>
       </header>
 
       <section class="svg-layout">
         <div class="svg-placeholder"></div>
 
         <article class="panel">
-          <h2>Udforsk eventet</h2>
+          <h2>Vælg din location</h2>
           <div class="accordion">
             <!-- TODO: Lav om til details/summary -->
-            <div class="accordion-item">
-              <h3>Punkt 1</h3>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 2</h3>
-              <p>Beskriv andet område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 3</h3>
-              <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
-            </div>
-          </div>
+
+            <details class="accordion-item" name="accordion" open>
+              <summary>Indgangen</summary>
+              <div>
+                <p>Her begynder festivaloplevelsen. Vis din billet og træd ind i stemningen.</p>
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion">
+              <summary>Strandbaren</summary>
+              <div>
+                <p>Kolde drikke, gode vibes og den perfekte pause mellem koncerterne.</p>
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion">
+              <summary>Strandscenen</summary>
+              <div>
+                <p>Festivalens hjerte. Her kan du opleve live musik, fællesskab og uforglemmelige øjeblikke.</p>
+              </div>
+            </details>
         </article>
       </section>
     </section>
