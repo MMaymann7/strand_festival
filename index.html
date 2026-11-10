@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Sound of Hornbæk</a>
+      <a class="site-logo" href="./index.html">Sound of Hornbæk</a>
       <nav class="site-nav">
         <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
@@ -42,27 +42,73 @@
       <div class="artists">
         <div class="box1">
           <img src="./imgs/lukasgraham_forside_billede.webp" alt="Lukas Graham">
-
           <p>Lukas Graham</p>
-
-          <button class="btn" popovertarget="box1">
-            Læs mere
-          </button>
+          <button class="btn" popovertarget="popover1">Læs mere</button>
         </div>
 
         <div class="box2">
           <img src="./imgs/annika_forside_billede.png" alt="Annika">
-
           <p>Annika</p>
+          <button class="btn" popovertarget="popover2">Læs mere</button>
         </div>
 
         <div class="box3">
           <img src="./imgs/christopher_forside_billede.jpg" alt="Christopher">
-
           <p>Christopher</p>
+          <button class="btn" popovertarget="popover3">Læs mere</button>
+        </div>
+      </div>
+
+      <div id="popover1" class="popup" popover>
+        <img src="./imgs/lukasgraham_forside_billede.webp" alt="Lukas Graham">
+
+        <div class="popup-tekst">
+          <h2>Lukas Graham</h2>
+          <p>Lukas Graham blev dannet i 2011 af sangeren Lukas Forchhammer sammen med to venner, og bandet kommer fra
+            Christiania i København. Debutalbummet fra 2012 gik direkte ind som nummer et på de danske hitlister, og med
+            singlen
+            "7 Years" fra 2015 blev bandet kendt langt uden for Danmarks grænser. Musikken blander pop, soul og R&amp;B.
+          </p>
+          <button class="luk" popovertarget="popover1" popovertargetaction="hide">Luk</button>
+        </div>
+      </div>
+
+      <div id="popover2" class="popup" popover>
+        <img src="./imgs/annika_forside_billede.png" alt="Annika">
+
+        <div class="popup-tekst">
+          <h2>Annika</h2>
+          <p>Annika er født i 2004 og voksede op i Vejby i Nordsjælland. Som barn spillede hun med i filmen Jagten, før
+            hun slog
+            igennem som sanger. I 2024 vandt hun prisen som Årets Nye Danske Navn ved Danish Music Awards, og hendes
+            debutalbum
+            gik ind som nummer et på den danske albumliste i 2025. Samme år åbnede hun Orange Scene på Roskilde
+            Festival.</p>
+          <button class="luk" popovertarget="popover2" popovertargetaction="hide">Luk</button>
+        </div>
+      </div>
+
+      <div id="popover3" class="popup" popover>
+        <img src="./imgs/christopher_forside_billede.jpg" alt="Christopher">
+
+        <div class="popup-tekst">
+          <h2>Christopher</h2>
+          <p>Christopher er en dansk popsanger og sangskriver, kendt for sin bløde stemme og følsomme tekster. Han er
+            vokset op
+            på Amager og begyndte at synge som treårig, og han startede med at lægge coverversioner ud på nettet. I 2014
+            vandt
+            han flere priser ved Danish Music Awards, blandt andet Årets Popalbum, og hittet "CPH Girls" blev et af hans
+            største.</p>
+          <button class="luk" popovertarget="popover3" popovertargetaction="hide">Luk</button>
         </div>
       </div>
     </section>
+
+    <div class="marquee" aria-label="Navneliste">
+      <div class="track">
+        <span>Annika * Lukas Graham * Christopher </span>
+      </div>
+    </div>
 
     <section class="svg_teaser">
       <div>
