@@ -25,13 +25,91 @@
   </header>
 
   <main>
-    <section class="form-page">
-      <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
-      </header>
+    <section class="side">
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <!-- Venstre: tekst -->
+      <div class="intro">
+        <h1>Opret dit festivalsarmbånd</h1>
+        <p class="lead">
+          Svar på et par korte spørgsmål, så sammensætter vi et personligt
+          armbånd med din stil.
+        </p>
+
+        <ol class="trin">
+          <li>
+            <span class="nummer">01</span>
+            <p>Vælg dit mønster og gør dit armbånd unik</p>
+          </li>
+          <li>
+            <span class="nummer">02</span>
+            <p>Giv armbåndet en farvepalette, så det føles som dit eget.</p>
+          </li>
+          <li>
+            <span class="nummer">03</span>
+            <p>Generér armbåndet og oplev den fedeste festival, med dit helt eget armbånd.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Højre: formularboks -->
+
+      <form class="form-placeholder" action="./opsamling.html">
+        <fieldset>
+          <legend>Vælg mønster</legend>
+          <div class="valg-rad">
+            <input type="radio" name="moenster" id="camo" checked>
+            <label for="camo">Camo</label>
+
+            <input type="radio" name="moenster" id="striber">
+            <label for="striber">Striber</label>
+
+            <input type="radio" name="moenster" id="prikker">
+            <label for="prikker">Prikker</label>
+
+            <input type="radio" name="moenster" id="leopard">
+            <label for="leopard">Leopard</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Vælg farver</legend>
+          <div class="valg-rad">
+            <input type="radio" name="farver" id="palet1" checked>
+            <label for="palet1" class="palet palet1" aria-label="Palet 1"></label>
+
+            <input type="radio" name="farver" id="palet2">
+            <label for="palet2" class="palet palet2" aria-label="Palet 2"></label>
+
+            <input type="radio" name="farver" id="palet3">
+            <label for="palet3" class="palet palet3" aria-label="Palet 3"></label>
+
+            <input type="radio" name="farver" id="palet4">
+            <label for="palet4" class="palet palet4" aria-label="Palet 4"></label>
+
+            <input type="radio" name="farver" id="palet5">
+            <label for="palet5" class="palet palet5" aria-label="Palet 5"></label>
+
+            <input type="radio" name="farver" id="palet6">
+            <label for="palet6" class="palet palet6" aria-label="Palet 6"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Vælg logotype</legend>
+          <div class="valg-rad">
+            <input type="radio" name="logo" id="partout" checked>
+            <label for="partout">Partout</label>
+
+            <input type="radio" name="logo" id="endags">
+            <label for="endags">En-dags</label>
+
+            <input type="radio" name="logo" id="todags">
+            <label for="todags">To-dags</label>
+          </div>
+        </fieldset>
+        <button type="submit" class="generer">Generer mit armbånd</button>
+      </form>
+
     </section>
   </main>
 

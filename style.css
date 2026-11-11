@@ -494,6 +494,7 @@ main > * {
   border-radius: 10px;
   border: 3px solid #fff;
   padding: 10px;
+  cursor: pointer;
   p {
     font-size: 1rem;
     color: white;
@@ -511,4 +512,195 @@ summary::marker {
 }
 [open]::details-content {
   height: auto;
+}
+
+/********************************formular********************************/
+
+.side {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/* ---------- Venstre: tekst ---------- */
+.intro h1 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4a4a5a;
+  margin-bottom: 36px;
+}
+
+.trin {
+  list-style: none;
+  background: #fdfafc;
+  border: 2px solid #dcc9d4;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.trin li {
+  display: flex;
+  gap: 40px;
+  padding: 32px 36px;
+  border-bottom: 2px solid #dcc9d4;
+}
+
+.trin li:last-child {
+  border-bottom: none;
+}
+
+.nummer {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4f8fd0;
+  min-width: 40px;
+}
+
+.trin p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4a4a5a;
+}
+
+/* ---------- Højre: formularboks ---------- */
+.form-placeholder {
+  background: #fdfafc;
+  border: 2px solid #dcc9d4;
+  border-radius: 40px;
+  padding: 50px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+fieldset {
+  border: 2px solid #dcc9d4;
+  border-radius: 24px;
+  padding: 24px 36px 28px;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+/* Rad med valg */
+.valg-rad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* Skjul den rigtige radioknap */
+.valg-rad input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Knapper */
+.valg-rad label {
+  padding: 20px 40px;
+  background: #ffffff;
+  border: 2px solid #dcc9d4;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.valg-rad input:checked + label {
+  border: 4px solid #4f8fd0;
+  padding: 18px 38px;
+  color: #4f8fd0;
+}
+
+.valg-rad input:focus-visible + label {
+  outline: 3px solid #4f8fd0;
+  outline-offset: 3px;
+}
+
+/* Farvepaletter */
+.valg-rad .palet,
+.valg-rad input:checked + .palet {
+  width: 110px;
+  height: 60px;
+  padding: 0;
+}
+
+.valg-rad .palet1 {
+  background: linear-gradient(90deg, #a98ae8 33%, #2f5d42 33% 66%, #437a5a 66%);
+}
+.valg-rad .palet2 {
+  background: linear-gradient(90deg, #f9d8ab 33%, #b3345f 33% 66%, #e39231 66%);
+}
+.valg-rad .palet3 {
+  background: linear-gradient(90deg, #a8d8e4 33%, #215372 33% 66%, #3a7d9e 66%);
+}
+.valg-rad .palet4 {
+  background: linear-gradient(90deg, #dcff63 33%, #1a1a1a 33% 66%, #ec4d9c 66%);
+}
+.valg-rad .palet5 {
+  background: linear-gradient(90deg, #cbd8a8 33%, #2f4d25 33% 66%, #66813f 66%);
+}
+.valg-rad .palet6 {
+  background: linear-gradient(90deg, #f5c4dc 33%, #8a3463 33% 66%, #d9569b 66%);
+}
+
+/* ---------- Responsivt ---------- */
+@media (max-width: 900px) {
+  .side {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 32px 16px;
+  }
+
+  .intro h1 {
+    font-size: 3rem;
+  }
+
+  .formular {
+    padding: 36px 20px 28px;
+    border-radius: 28px;
+  }
+
+  fieldset {
+    padding: 20px;
+  }
+}
+
+/* ---------- Generer-knap ---------- */
+.generer {
+  align-self: flex-start;
+  background: #4f8fd0;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 24px 42px;
+  font-family: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.generer:hover {
+  background: #4f8fd0;
+  transform: translateY(-2px);
+}
+
+.generer:focus-visible {
+  outline: 3px solid #4f8fd0;
+  outline-offset: 3px;
 }
