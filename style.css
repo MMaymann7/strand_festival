@@ -331,6 +331,35 @@ main > * {
     }
   }
 }
+
+.marquee {
+  background: #62a0dd;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1.5rem 0;
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 15s linear infinite;
+}
+.track span {
+  font-family: "DejaVu Sans Mono", Consolas, monospace;
+  font-weight: 700;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .svg_teaser {
   display: grid;
 }
