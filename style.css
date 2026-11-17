@@ -543,6 +543,22 @@ summary::marker {
   height: auto;
 }
 
+.person {
+  transition: 1.5s;
+  translate: var(--x) var(--y);
+}
+.svg_festival[data-position="indgangen"] {
+  --x: 0%;
+  --y: 0%;
+}
+.svg_festival[data-position="strandbaren"] {
+  --x: -56%;
+  --y: -25%;
+}
+.svg_festival[data-position="strandscenen"] {
+  --x: -11%;
+  --y: -48%;
+}
 /********************************formular********************************/
 
 .side {
