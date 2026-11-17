@@ -746,12 +746,12 @@ legend {
   text-decoration: none;
 }
 
-.kort {
+.svg_festival {
   position: relative;
   display: inline-block; /* så sektionen kun er lige så stor som billedet */
 }
 
-.kort img {
+.svg_festival img {
   display: block; /* fjerner det lille mellemrum under billedet */
   width: 100%;
   border-radius: 30px;
@@ -770,6 +770,10 @@ legend {
 
 @view-transition {
   navigation: auto;
+}
+
+.svg_festival {
+  view-transition-name: svg;
 }
 
 .img {
