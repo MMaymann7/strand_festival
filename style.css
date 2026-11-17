@@ -733,3 +733,45 @@ legend {
   outline: 3px solid #4f8fd0;
   outline-offset: 3px;
 }
+/******************detaljer********************/
+.svg_knap {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d98b48;
+  color: white;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.kort {
+  position: relative;
+  display: inline-block; /* så sektionen kun er lige så stor som billedet */
+}
+
+.kort img {
+  display: block; /* fjerner det lille mellemrum under billedet */
+  width: 100%;
+  border-radius: 30px;
+}
+
+.svg_knap {
+  position: absolute;
+  right: 16px; /* afstand fra højre kant */
+  bottom: 16px; /* afstand fra bunden */
+}
+
+.mail {
+  color: white;
+  text-decoration: none;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+.img {
+  view-transition-name: img;
+}
