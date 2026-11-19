@@ -18,8 +18,8 @@
         <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+          <li><a href="./svg.html">Find vej</a></li>
+          <li><a href="./form.html" aria-current="page">Dit armbånd</a></li>
         </ul>
       </nav>
     </div>
@@ -58,7 +58,7 @@
         <fieldset>
           <legend>Vælg mønster</legend>
           <div class="valg-rad">
-            <input type="radio" name="moenster" id="camo" checked>
+            <input type="radio" name="moenster" id="camo" value="camo" checked>
             <label for="camo">Camo</label>
 
             <!-- <input type="radio" name="moenster" id="striber">
@@ -67,7 +67,7 @@
             <input type="radio" name="moenster" id="prikker">
             <label for="prikker">Prikker</label> -->
 
-            <input type="radio" name="moenster" id="leopard">
+            <input type="radio" name="moenster" id="leopard" value="leopard">
             <label for="leopard">Leopard</label>
           </div>
         </fieldset>
@@ -75,10 +75,10 @@
         <fieldset>
           <legend>Vælg farver</legend>
           <div class="valg-rad">
-            <input type="radio" name="farver" id="palet1" checked>
+            <input type="radio" name="farver" id="palet1" value="palet1" checked>
             <label for="palet1" class="palet palet1" aria-label="Palet 1"></label>
 
-            <input type="radio" name="farver" id="palet2">
+            <input type="radio" name="farver" id="palet2" value="palet2">
             <label for="palet2" class="palet palet2" aria-label="Palet 2"></label>
 
             <!-- <input type="radio" name="farver" id="palet3">
@@ -98,13 +98,13 @@
         <fieldset>
           <legend>Vælg logotype</legend>
           <div class="valg-rad">
-            <input type="radio" name="logo" id="partout" checked>
+            <input type="radio" name="logo" id="partout" value="partout" checked>
             <label for="partout">Partout</label>
 
-            <input type="radio" name="logo" id="endags">
+            <input type="radio" name="logo" id="endags" value="endags">
             <label for="endags">En-dags</label>
 
-            <input type="radio" name="logo" id="todags">
+            <input type="radio" name="logo" id="todags" value="todags">
             <label for="todags">To-dags</label>
           </div>
         </fieldset>
